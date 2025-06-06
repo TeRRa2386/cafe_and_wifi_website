@@ -1,0 +1,65 @@
+{% include 'head.html' %}
+
+<!-- Header -->
+{% include 'header.html' %}
+
+<body>
+<div class="container py-3">
+    <h1 class="display-5 fw-bold" align="center">Add your favorite Cafe!</h1>
+    <div class="container col-5 h-100 p-5 bg-body-tertiary border rounded-3 my-5">
+
+        <form method="POST" class="row g-3">
+            {{ form.hidden_tag() }}
+
+            <div class="col-md-6">
+                {{ form.name.label(class="form-label") }}
+                {{ form.name(class="form-control") }}
+            </div>
+            <div class="col-md-6">
+                {{ form.location.label(class="form-label") }}
+                {{ form.location(class="form-control") }}
+            </div>
+            <div class="col-12">
+                {{ form.map_url.label(class="form-label") }}
+                {{ form.map_url(class="form-control", placeholder="https://maps.app.goo.gl/") }}
+            </div>
+            <div class="col-12">
+                {{ form.img_url.label(class="form-label") }}
+                {{ form.img_url(class="form-control", placeholder="https://image.jpg") }}
+            </div>
+            <div class="col-md-4">
+                {{ form.coffee_price.label(class="form-label") }}
+                {{ form.coffee_price(class="form-control", placeholder="$") }}
+            </div>
+            <div class="col-md-4">
+                {{ form.seats.label(class="form-label") }}
+                {{ form.seats(class="form-select") }}
+            </div>
+            <div class="col-8">
+                <div class="form-check">
+                    {{ form.has_wifi(class="form-check-input") }}
+                    {{ form.has_wifi.label(class="form-check-label") }}
+                </div>
+                <div class="form-check">
+                    {{ form.has_sockets(class="form-check-input") }}
+                    {{ form.has_sockets.label(class="form-check-label") }}
+                </div>
+                <div class="form-check">
+                    {{ form.can_take_calls(class="form-check-input") }}
+                    {{ form.can_take_calls.label(class="form-check-label") }}
+                </div>
+                <div class="form-check">
+                    {{ form.has_toilet(class="form-check-input") }}
+                    {{ form.has_toilet.label(class="form-check-label") }}
+                </div>
+            </div>
+            <div class="col-12">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+
+    </div>
+</div>
+
+</body>
+</html>
