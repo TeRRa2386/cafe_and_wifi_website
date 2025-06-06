@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-# from flask_bootstrap5 import Bootstrap
 from flask_wtf import FlaskForm
 from sqlalchemy.exc import SQLAlchemyError
 from wtforms import StringField, SubmitField, SelectField
@@ -19,7 +18,6 @@ app = Flask(__name__)
 
 
 app.config['SECRET_KEY'] = os.getenv('SK')
-# Bootstrap(app)
 
 class Base(DeclarativeBase):
     pass

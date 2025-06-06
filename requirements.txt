@@ -3,4 +3,5 @@ Flask-WTF>=1.0
 Flask-SQLAlchemy>=3.0
 python-dotenv>=1.0
 SQLAlchemy>=2.0
-WTForms>=3.0
+WTForms>=3.
+gunicorn>=20.0
